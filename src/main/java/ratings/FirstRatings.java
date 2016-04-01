@@ -1,4 +1,4 @@
-package week1;
+package ratings;
 
 import duke.FileResource;
 import org.apache.commons.csv.CSVRecord;
@@ -128,11 +128,7 @@ public class FirstRatings {
   public int getNumOfRatedMovies(List<Rater> raterList) {
     List<String> movieList = new ArrayList<>();
     for (Rater rater : raterList) {
-      for (String movie : rater.getItemsRated()) {
-        if (!movieList.contains(movie)) {
-          movieList.add(movie);
-        }
-      }
+      rater.getItemsRated().stream().filter(movie -> !movieList.contains(movie)).forEach(movieList::add);
     }
     return movieList.size();
   }

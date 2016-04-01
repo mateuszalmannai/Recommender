@@ -1,4 +1,4 @@
-package week1;
+package ratings;
 /**
  * Write a description of class Rater here.
  *

@@ -1,4 +1,4 @@
-package week1;
+package ratings;
 
 // An immutable passive data object (PDO) to represent item data
 public class Movie {
