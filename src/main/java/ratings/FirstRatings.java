@@ -70,7 +70,7 @@ public class FirstRatings {
 
       int raterIndex = raterIndex(resultList, raterID);
       if (raterIndex == -1) {
-        Rater currentRater = new Rater(raterID);
+        Rater currentRater = new EfficientRater(raterID);
         currentRater.addRating(movieID, rating);
         resultList.add(currentRater);
       } else {

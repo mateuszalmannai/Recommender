@@ -2,9 +2,6 @@ package ratings;
 
 import org.junit.Before;
 import org.junit.Test;
-import ratings.FirstRatings;
-import ratings.Movie;
-import ratings.Rater;
 
 import java.util.List;
 import java.util.Map;
