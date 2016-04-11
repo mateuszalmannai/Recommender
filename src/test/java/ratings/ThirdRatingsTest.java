@@ -8,17 +8,23 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
+/**
+ * The tests which initialize the MovieDatabase with the large dataset are ignored
+ * as they can't be run simultaneously with the smaller dataset, since we have
+ * no control over the sequence the tests are run in and the static instance is shared
+ */
 public class ThirdRatingsTest {
 
   private static final String SHORT_MOVIES = "ratedmovies_short.csv";
   private static final String SHORT_RATINGS = "ratings_short.csv";
 
   private static final String FULL_RATINGS = "ratings.csv";
+
   @Before
   public void setUp() throws Exception {
-
+    MovieDatabase.resetDatabase();
   }
 
   @Test

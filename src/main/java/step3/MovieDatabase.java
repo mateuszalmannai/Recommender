@@ -11,8 +11,6 @@ import java.util.stream.Collectors;
 public class MovieDatabase {
   private static Map<String, Movie> ourMovies;
 
-  private static final String BASE_PATH = "/Users/mateusz/IdeaProjects/Recommender/src/main/resources/data/";
-
   public static void initialize(String movieFile) {
     if (ourMovies == null) {
       ourMovies = new HashMap<>();
@@ -109,4 +107,7 @@ public class MovieDatabase {
     return ourMovies.keySet().stream().filter(id -> f.satisfies(id)).collect(Collectors.toList());
   }
 
+  public static void resetDatabase() {
+    ourMovies = null;
+  }
 }
